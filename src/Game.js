@@ -13,7 +13,7 @@ const Game = () => {
       setCellValue((prev) => {
         const newArray = [...prev];
         newArray[id] = gameState;
-        console.log(newArray);
+        //console.log(newArray);
         checkWinner(newArray);
         return newArray;
       });
@@ -24,6 +24,7 @@ const Game = () => {
     setGameState(gameState === "X" ? "O" : "X");
   };
 
+  //toast
   const notify = (player) =>
     toast.success(`${player} won`, {
       position: "top-right",
