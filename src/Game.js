@@ -87,8 +87,13 @@ const Game = () => {
         draggable
         pauseOnHover
       />
+      {!winner && (
+        <h3>
+          <span>{gameState}'s</span> turn
+        </h3>
+      )}
+
       <table>
-        {gameState}'s turn
         <tbody>
           <tr>
             <Box id="0" />
@@ -109,6 +114,7 @@ const Game = () => {
       </table>
       {winner && (
         <>
+          <h3>{winner} wins</h3>
           <button onClick={() => window.location.reload()}>Restart</button>
         </>
       )}
